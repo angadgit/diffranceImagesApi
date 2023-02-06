@@ -38,8 +38,6 @@ app.post("/", async (req, res) => {
         psm: 3,
       };
 
-     
-
       // var diffi = await resemble("./image.png")
       //   .compareTo("./A.png")
       //   .ignoreColors()
@@ -93,10 +91,29 @@ app.post("/", async (req, res) => {
       //   }`
       // );
 
+      // Tesseract.recognize("./image.png")
+      //   .setOptions({
+      //     tessedit_char_whitelist:
+      //       "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      //   })
+      //   .then(function (result) {
+      //     console.log(result.text);
+      //   });
+      // Tesseract.recognize("./image.png", {
+      //   tessedit_char_whitelist:
+      //     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
+      // })
+      //   .then(function (result) {
+      //     console.log(result.text);
+      //   })
+      //   .catch(function (err) {
+      //     console.error(err);
+      //   });
+
       const txt = await Tesseract.recognize("./image.png", "eng", {
         logger: (m) => m,
       }).then(({ data: { text } }) => {
-        // console.log(text);
+        console.log(text);
         return text;
       });
       // console.log(txt);
@@ -140,4 +157,6 @@ app.post("/", async (req, res) => {
   }
 });
 
-app.listen(4000, () => console.log("Server is running on port 4000"));
+app.listen(process.env.PORT || 4000, () =>
+  console.log("Server is running on port 4000")
+);
