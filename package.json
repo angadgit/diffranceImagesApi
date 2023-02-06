@@ -1,8 +1,13 @@
 {
   "name": "imagesdeff",
   "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js",
+    "pre-deploy": "node deleteLastDeploy.js",
+    "deploy": "npm run pre-deploy && now --public && now alias",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
