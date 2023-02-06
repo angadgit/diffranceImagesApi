@@ -1,8 +1,6 @@
 {
   "name": "imagesdeff",
   "version": "1.0.0",
-  "description": "",
-  "type": "module",
   "scripts": {
     "start": "nodemon index.js"
   },
