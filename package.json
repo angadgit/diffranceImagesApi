@@ -2,12 +2,9 @@
   "name": "imagesdeff",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "pre-deploy": "node deleteLastDeploy.js",
-    "deploy": "npm run pre-deploy && now --public && now alias",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon index.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,8 +14,6 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "jimp": "^0.16.2",
-    "node-resemble-js": "^0.2.0",
-    "node-tesseract-ocr": "^2.2.1",
     "nodemon": "^2.0.20",
     "tesseract.js": "^4.0.2",
     "text-from-image": "^1.1.1"
