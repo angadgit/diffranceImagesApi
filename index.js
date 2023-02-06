@@ -1,11 +1,11 @@
 // import express from "express";
-import cors from "cors";
-import * as dotenv from "dotenv";
-import Jimp from "jimp";
-import { converBase64ToImage } from "convert-base64-to-image";
-import Tesseract, { createWorker } from "tesseract.js";
-import resemble from "node-resemble-js";
-import tesseract from "node-tesseract-ocr";
+// import cors from "cors";
+// import * as dotenv from "dotenv";
+// import Jimp from "jimp";
+// import { converBase64ToImage } from "convert-base64-to-image";
+// import Tesseract, { createWorker } from "tesseract.js";
+// import resemble from "node-resemble-js";
+// import tesseract from "node-tesseract-ocr";
 // import resemble from "resemblejs";
 
 // dotenv.config();
@@ -163,6 +163,9 @@ import tesseract from "node-tesseract-ocr";
 
 // index.js
 const express = require("express");
+const Jimp = require("jimp");
+const { converBase64ToImage } = require("convert-base64-to-image");
+const Tesseract = require("tesseract.js");
 
 const app = express();
 const PORT = process.env.PORT || 4000;
