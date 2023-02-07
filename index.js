@@ -14,7 +14,7 @@ app.get("/", async (req, res) => {
   });
 });
 
-app.post("/", async (req, res) => {
+app.post("/post", async (req, res) => {
   try {
     if (req.body.img !== null) {
       const base64 = req.body?.img;
